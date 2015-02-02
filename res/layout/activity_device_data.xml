@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/Temperature_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/temperature_label" />
+
+    <Button
+        android:id="@+id/Temperature_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Temperature_Label"
+        android:layout_below="@+id/Temperature_Label"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/Humidity_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Temperature_Button"
+        android:layout_below="@+id/Temperature_Button"
+        android:layout_marginTop="14dp"
+        android:text="@string/humidity_label" />
+
+    <Button
+        android:id="@+id/Humidity_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Humidity_Label"
+        android:layout_below="@+id/Humidity_Label"
+        android:layout_marginTop="7dp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/DailyPos_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Humidity_Button"
+        android:layout_below="@+id/Humidity_Button"
+        android:layout_marginTop="27dp"
+        android:text="@string/dailypos_label" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DailyPos_Label"
+        android:layout_below="@+id/DailyPos_Label"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio_positive_label" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_negative_label" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/timerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_marginTop="47dp"
+        android:onClick="startTimer"
+        android:text="StartTimer" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/timerButton"
+        android:layout_below="@+id/timerButton"
+        android:layout_marginTop="24dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

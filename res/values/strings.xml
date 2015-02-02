@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CortegixRDT</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="study_id_label">Study ID Number</string>
+    <string name="study_id_field_default">Study ID Number</string>
+    <string name="age_label">Enter Age:</string>
+    <string name="age_field_default">34</string>
+    <string name="gender_label">Enter Gender:</string>
+    <string name="gender_male_button">Male</string>
+    <string name="gender_female_button">Female</string>
+    <string name="date_label">Enter Date:</string>
+    <string name="test_kit_label">Test Kit Lot:</string>
+    <string name="test_kit_hint">Enter Test Kit Lot</string>
+    <string name="exp_label">Exp:</string>
+    <string name="exp_hint">Enter Exp</string>
+    <string name="continue_button">Continue</string>
+    <string name="device_data_label">Device Data</string>
+    <string name="temperature_label">Enter Temperature</string>
+    <string name="humidity_label">Enter Humidity</string>
+    <string name="dailypos_label">Daily POS Control Result:</string>
+    <string name="dailyneg_label">Daily NEG Control Result:</string>
+    <string name="radio_positive_label">Positive</string>
+    <string name="radio_negative_label">Negative</string>
+    <string name="radio_invalid_label">Invalid</string>
+    <string name="title_activity_picker_test">PickerTest</string>
+    <string name="title_activity_device_data">Device Data</string>
+    <string name="title_activity_reader_one">Reader One</string>
+    
+    <!-- Reader Results -->
+    <string name="results_read_label">Minutes Before Results Read:</string>
+	<string name="readers_initials_label">Reader\'s Initials</string>
+	<string name="readers_initials_hint">Enter Initials</string>
+	<string name="result_interpretation_label">Result Interpretation</string>
+	<string name="positivity_score_label">Positivity Score (5=high, 1=low)</string>
+	<string name="circle_positivity_label">Positivity Score</string>
+	<string name="circle_invalid_label">Reason For Invalid</string>
+	
+</resources>

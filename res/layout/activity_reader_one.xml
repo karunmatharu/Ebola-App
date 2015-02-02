@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/Results_Read_After_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/results_read_label" />
+
+    <Button
+        android:id="@+id/Mins_Before_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Results_Read_After_Label"
+        android:layout_below="@+id/Results_Read_After_Label"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/Readers_Initials_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Mins_Before_Button"
+        android:layout_below="@+id/Mins_Before_Button"
+        android:layout_marginTop="22dp"
+        android:text="@string/readers_initials_label" />
+
+    <EditText
+        android:id="@+id/Readers_Initials_Field"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Readers_Initials_Label"
+        android:layout_below="@+id/Readers_Initials_Label"
+        android:ems="10"
+        android:hint="@string/readers_initials_hint" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/Result_Interpretation_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Readers_Initials_Field"
+        android:layout_below="@+id/Readers_Initials_Field"
+        android:layout_marginTop="23dp"
+        android:text="@string/result_interpretation_label" />
+
+    <TextView
+        android:id="@+id/Positivity_Score_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Result_Interpretation_Label"
+        android:layout_centerVertical="true"
+        android:text="@string/positivity_score_label"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/Result_Radio_Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Positivity_Score_Label"
+        android:layout_below="@+id/Result_Interpretation_Label"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RadioButton
+            android:id="@+id/Result_Positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio_positive_label"
+            android:onClick="resultButtonClicked" />
+
+        <RadioButton
+            android:id="@+id/Result_Negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_negative_label"
+            android:onClick="resultButtonClicked" />
+
+        <RadioButton
+            android:id="@+id/Result_Invalid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_invalid_label"
+            android:onClick="resultButtonClicked" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/Positivity_Scores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Positivity_Score_Label"
+        android:layout_below="@+id/Positivity_Score_Label"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/positivityScore5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="5" />
+
+        <RadioButton
+            android:id="@+id/positivityScore4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/positivityScore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/positivityScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/positivityScore1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+    </RadioGroup>
+
+</RelativeLayout>

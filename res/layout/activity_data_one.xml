@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/StudyIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/StudyIdField"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/study_id_label" />
+
+    <EditText
+        android:id="@+id/StudyIdField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/StudyIdLabel"
+        android:layout_marginLeft="22dp"
+        android:ems="10"
+        android:hint="@string/study_id_field_default" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/Age_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/StudyIdField"
+        android:layout_below="@+id/StudyIdField"
+        android:layout_marginTop="21dp"
+        android:text="@string/age_label" />
+
+    <Button
+        android:id="@+id/Temperature_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Age_Label"
+        android:layout_below="@+id/Age_Label"
+        android:onClick="ageButton"
+        android:text="Age Button" />
+
+    <TextView
+        android:id="@+id/Gender_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Temperature_Button"
+        android:layout_below="@+id/Temperature_Button"
+        android:layout_marginTop="25dp"
+        android:text="@string/gender_label" />
+
+    <RadioGroup
+        android:id="@+id/Gender_Radio_Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Gender_Label"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/Gender_Label" >
+
+        <RadioButton
+            android:id="@+id/Male_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onGenderButtonClicked"
+            android:text="@string/gender_male_button" />
+
+        <RadioButton
+            android:id="@+id/Female_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onGenderButtonClicked"
+            android:text="@string/gender_female_button" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Date_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/Age_Label"
+        android:layout_below="@+id/Gender_Radio_Group"
+        android:layout_marginTop="22dp"
+        android:text="@string/date_label" />
+
+    <Button
+        android:id="@+id/Date_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Date_Label"
+        android:layout_below="@+id/Date_Label"
+        android:layout_marginTop="7dp"
+        android:text="Date Button" />
+
+    <TextView
+        android:id="@+id/Test_Kit_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Date_Button"
+        android:layout_below="@+id/Date_Button"
+        android:layout_marginTop="29dp"
+        android:text="@string/test_kit_label" />
+
+    <EditText
+        android:id="@+id/Test_Kit_Field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Test_Kit_Label"
+        android:layout_below="@+id/Test_Kit_Label"
+        android:hint="@string/test_kit_hint"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/Exp_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Test_Kit_Field"
+        android:layout_below="@+id/Test_Kit_Field"
+        android:layout_marginTop="19dp"
+        android:text="@string/exp_label" />
+
+    <EditText
+        android:id="@+id/Exp_Field"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Exp_Label"
+        android:layout_below="@+id/Exp_Label"
+        android:layout_marginTop="11dp"
+        android:hint="@string/exp_hint"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/DataOneContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Exp_Field"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="21dp"
+        android:onClick="continueToDeviceData"
+        android:text="@string/continue_button" />
+
+</RelativeLayout>
