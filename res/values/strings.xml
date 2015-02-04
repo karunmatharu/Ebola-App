@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CortegixRDT</string>
+    <string name="app_name">CorgenixRDT</string>
     <string name="hello_world">Hello world!</string>
     <string name="study_id_label">Study ID Number</string>
     <string name="study_id_field_default">Study ID Number</string>
@@ -27,14 +27,25 @@
     <string name="title_activity_picker_test">PickerTest</string>
     <string name="title_activity_device_data">Device Data</string>
     <string name="title_activity_reader_one">Reader One</string>
-    
+
     <!-- Reader Results -->
     <string name="results_read_label">Minutes Before Results Read:</string>
-	<string name="readers_initials_label">Reader\'s Initials</string>
-	<string name="readers_initials_hint">Enter Initials</string>
-	<string name="result_interpretation_label">Result Interpretation</string>
-	<string name="positivity_score_label">Positivity Score (5=high, 1=low)</string>
-	<string name="circle_positivity_label">Positivity Score</string>
-	<string name="circle_invalid_label">Reason For Invalid</string>
-	
+    <string name="readers_initials_label">Reader\'s Initials</string>
+    <string name="readers_initials_hint">Enter Initials</string>
+    <string name="result_interpretation_label">Result Interpretation</string>
+    <string name="positivity_score_label">Positivity Score (5=high, 1=low)</string>
+    <string name="invalid_reason_label">Reason For Invalid</string>
+    <string name="title_activity_age_picker">AgePicker</string>
+
+    <!-- Age Picker -->
+    <string name="years_label">Years</string>
+    <string name="months_label">Months</string>
+
+    <!-- Temperature Picker -->
+    <string name="degrees_symbol">&#176;C</string>
+
+    <!-- Humidity Picker -->
+    <string name="percent_symbol">%</string>
+    <string name="title_activity_doc_creator">DocCreator</string>
+
 </resources>

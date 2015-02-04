@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/Make_Pdf_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="26dp"
+        android:onClick="makePdfClicked"
+        android:text="Make PDf" />
+
+    <Button
+        android:id="@+id/Send_Pdf_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/Make_Pdf_Button"
+        android:layout_below="@+id/Make_Pdf_Button"
+        android:layout_marginTop="30dp"
+        android:onClick="sendPdfClicked"
+        android:text="Send PDf" />
+
+    <Button
+        android:id="@+id/Restart_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Send_Pdf_Button"
+        android:layout_below="@+id/Send_Pdf_Button"
+        android:layout_marginTop="33dp"
+        android:onClick="restartClicked"
+        android:text="Restart" />
+
+</RelativeLayout>

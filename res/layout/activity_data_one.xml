@@ -59,22 +59,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/Gender_Label"
         android:orientation="horizontal"
-        android:layout_alignLeft="@+id/Gender_Label" >
-
+        android:layout_alignLeft="@+id/Gender_Label">
+        
         <RadioButton
             android:id="@+id/Male_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onGenderButtonClicked"
-            android:text="@string/gender_male_button" />
+            android:text="@string/gender_male_button"
+            android:onClick="genderClicked" />
 
         <RadioButton
             android:id="@+id/Female_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onGenderButtonClicked"
-            android:text="@string/gender_female_button" />
-
+            android:text="@string/gender_female_button"
+            android:onClick="genderClicked" />
     </RadioGroup>
 
     <TextView
@@ -93,6 +92,7 @@
         android:layout_alignLeft="@+id/Date_Label"
         android:layout_below="@+id/Date_Label"
         android:layout_marginTop="7dp"
+        android:onClick="dateButton"
         android:text="Date Button" />
 
     <TextView

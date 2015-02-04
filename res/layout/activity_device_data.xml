@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Temperature_Label"
         android:layout_below="@+id/Temperature_Label"
+        android:onClick="temperatureButtonClicked"
         android:text="Button" />
 
     <TextView
@@ -38,6 +39,7 @@
         android:layout_alignLeft="@+id/Humidity_Label"
         android:layout_below="@+id/Humidity_Label"
         android:layout_marginTop="7dp"
+        android:onClick="humidityButtonClicked"
         android:text="Button" />
 
     <TextView
@@ -49,26 +51,62 @@
         android:layout_marginTop="27dp"
         android:text="@string/dailypos_label" />
 
+    <TextView
+        android:id="@+id/DailyNeg_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DailyPosButtons"
+        android:layout_below="@+id/DailyPosButtons"
+        android:layout_marginTop="20dp"
+        android:text="@string/dailyneg_label" />
+
     <RadioGroup
-        android:id="@+id/radioGroup1"
+        android:id="@+id/DailyNegButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DailyNeg_Label"
+        android:layout_below="@+id/DailyNeg_Label"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/DailyNegPositiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="dailyNegClicked"
+            android:text="Positive" />
+
+        <RadioButton
+            android:id="@+id/DailyNegNegativeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="dailyNegClicked"
+            android:checked="true"
+            android:text="Negative" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/DailyPosButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/DailyPos_Label"
         android:layout_below="@+id/DailyPos_Label"
-        android:layout_marginTop="10dp"
         android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/radio0"
+            android:id="@+id/DailyPosPositiveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:onClick="dailyPosClicked"
             android:text="@string/radio_positive_label" />
 
         <RadioButton
-            android:id="@+id/radio1"
+            android:id="@+id/DailyPosNegativeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+			android:onClick="dailyPosClicked"
             android:text="@string/radio_negative_label" />
     </RadioGroup>
 
@@ -76,9 +114,9 @@
         android:id="@+id/timerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioGroup1"
-        android:layout_below="@+id/radioGroup1"
-        android:layout_marginTop="47dp"
+        android:layout_alignLeft="@+id/DailyNegButtons"
+        android:layout_below="@+id/DailyNegButtons"
+        android:layout_marginTop="17dp"
         android:onClick="startTimer"
         android:text="StartTimer" />
 
@@ -88,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/timerButton"
         android:layout_below="@+id/timerButton"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="15dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

@@ -20,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Results_Read_After_Label"
         android:layout_below="@+id/Results_Read_After_Label"
+        android:onClick="minsReadButtonClicked"
         android:text="Button" />
 
     <TextView
@@ -52,15 +53,6 @@
         android:layout_marginTop="23dp"
         android:text="@string/result_interpretation_label" />
 
-    <TextView
-        android:id="@+id/Positivity_Score_Label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Result_Interpretation_Label"
-        android:layout_centerVertical="true"
-        android:text="@string/positivity_score_label"
-        android:visibility="gone" />
-
     <RadioGroup
         android:id="@+id/Result_Radio_Buttons"
         android:layout_width="wrap_content"
@@ -74,24 +66,76 @@
             android:id="@+id/Result_Positive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/radio_positive_label"
-            android:onClick="resultButtonClicked" />
+            android:onClick="resultButtonClicked"
+            android:text="@string/radio_positive_label" />
 
         <RadioButton
             android:id="@+id/Result_Negative"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_negative_label"
-            android:onClick="resultButtonClicked" />
+            android:onClick="resultButtonClicked"
+            android:text="@string/radio_negative_label" />
 
         <RadioButton
             android:id="@+id/Result_Invalid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_invalid_label"
-            android:onClick="resultButtonClicked" />
+            android:onClick="resultButtonClicked"
+            android:text="@string/radio_invalid_label" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/Invalid_Reason_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Result_Radio_Buttons"
+        android:layout_below="@+id/Result_Radio_Buttons"
+        android:layout_marginTop="14dp"
+        android:text="@string/invalid_reason_label"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/Invalid_Reasons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Invalid_Reason_Label"
+        android:layout_below="@+id/Invalid_Reason_Label"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/invalid1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="30dp"
+            android:text="1"
+            android:onClick="invalidReasonClicked" />
+
+        <RadioButton
+            android:id="@+id/invalid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:paddingRight="30dp"
+            android:onClick="invalidReasonClicked" 
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/invalid3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="invalidReasonClicked" 
+            android:text="3" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Positivity_Score_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Result_Interpretation_Label"
+        android:layout_below="@+id/Result_Radio_Buttons"
+        android:layout_marginTop="20dp"
+        android:text="@string/positivity_score_label"
+        android:visibility="visible" />
 
     <RadioGroup
         android:id="@+id/Positivity_Scores"
@@ -99,40 +143,53 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Positivity_Score_Label"
         android:layout_below="@+id/Positivity_Score_Label"
-        android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        android:visibility="gone" >
+        android:visibility="visible" >
 
         <RadioButton
-            android:id="@+id/positivityScore5"
+            android:id="@+id/positivity5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
+            android:onClick="positivityScoreClicked"
             android:text="5" />
 
         <RadioButton
-            android:id="@+id/positivityScore4"
+            android:id="@+id/positivity4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="positivityScoreClicked"
             android:text="4" />
 
         <RadioButton
-            android:id="@+id/positivityScore3"
+            android:id="@+id/positivity3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="positivityScoreClicked"
             android:text="3" />
 
         <RadioButton
-            android:id="@+id/positivityScore2"
+            android:id="@+id/positivity2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="positivityScoreClicked"
             android:text="2" />
 
         <RadioButton
-            android:id="@+id/positivityScore1"
+            android:id="@+id/positivity1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="positivityScoreClicked"
             android:text="1" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/ContinueNextReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Positivity_Scores"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="43dp"
+        android:onClick="nextReader"
+        android:text="Next Reader" />
 
 </RelativeLayout>

@@ -13,7 +13,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 //import android.content.DialogInterface.OnClickListener;
 
-public class PickerTest extends Activity{
+public class AgePicker extends Activity{
 
 NumberPicker MyNumPicker1, MyNumPicker2, MyNumPicker3;
 TextView txtMyText;
@@ -33,10 +33,10 @@ protected void onCreate(Bundle savedInstanceState) {
             public void onClick(View v) {
 
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View v1 = inflater.inflate(R.layout.number_picker, null);
-                MyNumPicker1 = (NumberPicker) v1.findViewById(R.id.MyNunPicker1);
-                MyNumPicker2 = (NumberPicker) v1.findViewById(R.id.MyNunPicker2);
-                MyNumPicker3 = (NumberPicker) v1.findViewById(R.id.MyNunPicker3);
+                View v1 = inflater.inflate(R.layout.age_picker, null);
+                MyNumPicker1 = (NumberPicker) v1.findViewById(R.id.AgePickerYears);
+                //MyNumPicker2 = (NumberPicker) v1.findViewById(R.id.MyNunPicker2);
+                //MyNumPicker3 = (NumberPicker) v1.findViewById(R.id.MyNunPicker3);
 
                 MyNumPicker1.setMaxValue(20);
                 MyNumPicker1.setMinValue(1);
@@ -54,7 +54,7 @@ protected void onCreate(Bundle savedInstanceState) {
                 MyNumPicker3.setWrapSelectorWheel(true);
 
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(PickerTest.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(AgePicker.this);
 
                 builder.setView( v1 );
                 builder.setTitle("Select Number");
