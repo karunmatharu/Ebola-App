@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="orange" >#FF9900</color>
+    <color name="magenta">#E80C7A</color>
+    <color name="yellow" >#ECD524</color>
+    <color name="white" >#FFFFFF</color>
+    <color name="lightblue">#1BA2B5</color>    
+    <color name="darkBlue">#00889B</color>
+    <color name="darkMagenta">#9B185A</color>
+    <color name="purple">#FF00FF</color>
+
+</resources>

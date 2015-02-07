@@ -30,7 +30,8 @@
         </activity>
         <activity
             android:name=".DeviceData"
-            android:label="@string/title_activity_device_data" >
+            android:label="@string/title_activity_device_data" 
+            android:launchMode="singleTop">
         </activity>
         <activity
             android:name=".Reader"

@@ -6,140 +6,158 @@
 
     <TextView
         android:id="@+id/StudyIdLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/StudyIdField"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="28dp"
-        android:text="@string/study_id_label" />
-
-    <EditText
-        android:id="@+id/StudyIdField"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/StudyIdLabel"
-        android:layout_marginLeft="22dp"
-        android:ems="10"
-        android:hint="@string/study_id_field_default" >
-
-        <requestFocus />
-    </EditText>
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/StudyIdField"
+        android:text="@string/study_id_label"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Age_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/StudyIdField"
+        android:layout_alignLeft="@+id/StudyIdLabel"
         android:layout_below="@+id/StudyIdField"
-        android:layout_marginTop="21dp"
-        android:text="@string/age_label" />
-
-    <Button
-        android:id="@+id/Temperature_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Age_Label"
-        android:layout_below="@+id/Age_Label"
-        android:onClick="ageButton"
-        android:text="Age Button" />
+        android:layout_marginTop="20dp"
+        android:text="@string/age_label"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Gender_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Temperature_Button"
-        android:layout_below="@+id/Temperature_Button"
-        android:layout_marginTop="25dp"
-        android:text="@string/gender_label" />
-
-    <RadioGroup
-        android:id="@+id/Gender_Radio_Group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Gender_Label"
-        android:orientation="horizontal"
-        android:layout_alignLeft="@+id/Gender_Label">
-        
-        <RadioButton
-            android:id="@+id/Male_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gender_male_button"
-            android:onClick="genderClicked" />
-
-        <RadioButton
-            android:id="@+id/Female_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gender_female_button"
-            android:onClick="genderClicked" />
-    </RadioGroup>
+        android:layout_alignLeft="@+id/Age_Label"
+        android:layout_below="@+id/Age_Button"
+        android:layout_marginTop="27dp"
+        android:text="@string/gender_label"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Date_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/Age_Label"
+        android:layout_alignLeft="@+id/Gender_Label"
         android:layout_below="@+id/Gender_Radio_Group"
-        android:layout_marginTop="22dp"
-        android:text="@string/date_label" />
+        android:layout_marginTop="24dp"
+        android:text="@string/date_label"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Age_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/StudyIdField"
+        android:layout_alignTop="@+id/Age_Label"
+        android:background="@drawable/button_outline"
+        android:onClick="ageButton"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Age Button"
+        android:textColor="@color/darkBlue"
+        android:textStyle="normal" />
+
+    <RadioGroup
+        android:id="@+id/Gender_Radio_Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Age_Button"
+        android:layout_alignTop="@+id/Gender_Label"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/Male_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="genderClicked"
+            android:text="@string/gender_male_button" />
+
+        <RadioButton
+            android:id="@+id/Female_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="genderClicked"
+            android:text="@string/gender_female_button" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/Date_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Date_Label"
-        android:layout_below="@+id/Date_Label"
-        android:layout_marginTop="7dp"
+        android:layout_alignLeft="@+id/Gender_Radio_Group"
+        android:layout_alignTop="@+id/Date_Label"
         android:onClick="dateButton"
-        android:text="Date Button" />
-
-    <TextView
-        android:id="@+id/Test_Kit_Label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Date_Button"
-        android:layout_below="@+id/Date_Button"
-        android:layout_marginTop="29dp"
-        android:text="@string/test_kit_label" />
+        android:text="Date Button"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/button_outline"
+        android:textColor="@color/darkBlue"
+        android:textStyle="normal" />
 
     <EditText
         android:id="@+id/Test_Kit_Field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Test_Kit_Label"
-        android:layout_below="@+id/Test_Kit_Label"
-        android:hint="@string/test_kit_hint"
-        android:ems="10" />
+        android:layout_alignLeft="@+id/Date_Button"
+        android:layout_alignTop="@+id/Test_Kit_Label"
+        android:ems="10"
+        android:hint="@string/test_kit_hint" />
 
     <TextView
         android:id="@+id/Exp_Label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Test_Kit_Field"
+        android:layout_alignLeft="@+id/Test_Kit_Label"
         android:layout_below="@+id/Test_Kit_Field"
+        android:layout_marginTop="22dp"
+        android:text="@string/exp_label"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Test_Kit_Label"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Date_Label"
+        android:layout_alignRight="@+id/Gender_Label"
+        android:layout_below="@+id/Date_Button"
         android:layout_marginTop="19dp"
-        android:text="@string/exp_label" />
+        android:text="@string/test_kit_label"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Exp_Field"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/Exp_Label"
-        android:layout_below="@+id/Exp_Label"
-        android:layout_marginTop="11dp"
-        android:hint="@string/exp_hint"
-        android:ems="10" />
+        android:layout_alignLeft="@+id/Test_Kit_Field"
+        android:layout_alignTop="@+id/Exp_Label"
+        android:ems="10"
+        android:hint="@string/exp_hint" />
+
+    <EditText
+        android:id="@+id/StudyIdField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/DataOneContinue"
+        android:layout_alignTop="@+id/StudyIdLabel"
+        android:ems="10"
+        android:hint="@string/study_id_field_default" />
 
     <Button
         android:id="@+id/DataOneContinue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/Exp_Field"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="21dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button_round"
         android:onClick="continueToDeviceData"
-        android:text="@string/continue_button" />
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/continue_button"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

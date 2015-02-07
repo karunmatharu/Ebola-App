@@ -219,6 +219,7 @@ public class PdfHandler {
 		String readTime = pref.getString(reader + "MinsBefore", defaultValue);
 		String result = pref.getString(reader + "Result", defaultValue);
 		String initials = pref.getString(reader + "ReaderInitials", defaultValue);
+		String studyId = pref.getString("studyId", null);
 		
 		String score = "";
 		if(result.equals("Positive")){
@@ -231,9 +232,18 @@ public class PdfHandler {
 		text.add(new Phrase("Reader " + readerNo + ": ", standardBold));
 		text.add(new Phrase("Results read after "));
 		text.add(new Phrase(readTime, standardBold));
-		text.add(new Phrase("min (range 5-15')"));
+		text.add(new Phrase(" (range 5-15')"));
 
-		text.add(new Phrase("               "));
+		//Add study id if not the first reading
+		if(readerNo > 1){
+			text.add(new Phrase("    "));
+			text.add(new Phrase("Study ID: " + studyId));
+			text.add(new Phrase("    "));
+		} else {
+			text.add(new Phrase("               "));
+		}
+		
+
 		text.add(new Phrase("Reader's initials: "));
 		text.add(new Phrase(initials, standardBold));
 		addEmptyLine(text, 1);

@@ -48,20 +48,16 @@ public class DataOne extends Activity {
 
 		Log.i(TAG, "Activity onCreate Method");
 		
-		/*
-		//Testing jumping to final activity
-		Intent intent = new Intent(this, DocCreator.class);
-		startActivity(intent);
-		if (true) 
-			return;
-			*/
-
 		
 		//Clear any previous preferences
 		pref = getApplicationContext().getSharedPreferences("MyPref", 0); 
 		Editor editor = pref.edit();
 		editor.clear();
 		editor.commit();
+		
+		
+		Log.i(TAG, "Got Shared preferences");
+
 		
 		//If age has already been set, set the text to the age
 		//else set the age to a default value
@@ -70,9 +66,12 @@ public class DataOne extends Activity {
 		} else{
 			age = "30y";
 		}
+		
 		//Set age buttons text
-		Button ageButton = (Button) findViewById(R.id.Temperature_Button);
+		Button ageButton = (Button) findViewById(R.id.Age_Button);
 		ageButton.setText(age);
+		
+		Log.i(TAG, "Button Text Set");
 		
 		//IF date has not already been set, change to today's date
 		if (dateDay == 0){
@@ -86,7 +85,8 @@ public class DataOne extends Activity {
 		Button dateButton = (Button) findViewById(R.id.Date_Button);
 		dateButton.setText(dateString);
 		
-			
+		Log.i(TAG, "Exiting on create");	
+		
 	}
 
 	@Override
@@ -146,7 +146,7 @@ public class DataOne extends Activity {
 				}
 				
 				//update the button text to new age
-				Button ageButton = (Button) findViewById(R.id.Temperature_Button);
+				Button ageButton = (Button) findViewById(R.id.Age_Button);
 				ageButton.setText(age);
 				
 				Toast.makeText(getBaseContext(), age, Toast.LENGTH_SHORT).show();
@@ -246,7 +246,6 @@ public class DataOne extends Activity {
 
 	public void continueToDeviceData(View view){
 
-		
 		//Save input data to preference
 		EditText edtx = (EditText)findViewById(R.id.StudyIdField);
 		studyId = edtx.getText().toString();

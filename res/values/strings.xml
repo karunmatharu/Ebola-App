@@ -5,12 +5,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="study_id_label">Study ID Number</string>
     <string name="study_id_field_default">Study ID Number</string>
-    <string name="age_label">Enter Age:</string>
+    <string name="age_label">Age:</string>
     <string name="age_field_default">34</string>
-    <string name="gender_label">Enter Gender:</string>
+    <string name="gender_label">Gender:</string>
     <string name="gender_male_button">Male</string>
     <string name="gender_female_button">Female</string>
-    <string name="date_label">Enter Date:</string>
+    <string name="date_label">Date:</string>
     <string name="test_kit_label">Test Kit Lot:</string>
     <string name="test_kit_hint">Enter Test Kit Lot</string>
     <string name="exp_label">Exp:</string>
